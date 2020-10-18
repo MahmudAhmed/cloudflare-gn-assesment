@@ -8,6 +8,8 @@ var LINK_THREE = { "name" : "Amazon", "url" : "https://aws.amazon.com/" };
 
 var LINKS = [ LINK_ONE, LINK_TWO, LINK_THREE ]; 
 
+
+// Appends the Links to DIV#links tag 
 class ElementHandler {
   async element(element) {
     for ( let link of LINKS) {
@@ -16,12 +18,15 @@ class ElementHandler {
   }
 }
 
+// Removes the "style" attribute from the given div#profile tag. 
 class ProfileHandler {
   async element(element) {
     element.removeAttribute("style");
   }
 }
 
+
+//Rewrites "src" and text for Avatar & Name
 class AttributeRewriter {
   constructor(attributeName) {
     this.attributeName = attributeName
@@ -41,6 +46,8 @@ class AttributeRewriter {
   }
 }
 
+
+// handles the main logic, checks weather the url is targeting an API endpoint or not. Handles accordingly.   
 async function handleRequest(request) {
   const path = new URL(request.url).pathname;
   if (path === "/links") {
