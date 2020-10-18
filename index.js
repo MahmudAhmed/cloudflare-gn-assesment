@@ -53,8 +53,9 @@ async function handleRequest(request) {
       .on("#links", new ElementHandler())
       .on("#profile", new ProfileHandler())
       .on("#name", new AttributeRewriter("value"))
-      .on("#avatar", new AttributeRewriter("src"))
-    return rewriter.transform(res)   
+      .on("#avatar", new AttributeRewriter("src"));
+
+    return rewriter.transform(res);
   };
 };
 
