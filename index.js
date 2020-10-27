@@ -48,7 +48,7 @@ class DisplayHandler {
 class AttributeRewriter {
   constructor(attributeName, value) {
     this.attributeName = attributeName
-    this.value = attributeName === "src" ? "https://media-exp1.licdn.com/dms/image/C4D35AQGmLYdaPBUNvw/profile-framedphoto-shrink_400_400/0?e=1603137600&v=beta&t=MDYky6qyGQ1KsylwGErNgP9FRKxObb8LsMGbRQ5B3eQ" : value;
+    this.value = attributeName === "src" ? "https://i.pinimg.com/564x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg" : value;
   }
   element(element) {
     if (this.attributeName === "src") {
